@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblTituloDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Insertar un nuevo departamento:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNombreDepartamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="Nombre del departamento:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTituloDepartamento" />
+
+    <EditText
+        android:id="@+id/txtNombreDepartamento"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_style"
+        android:ems="10"
+        android:hint="Ingrese el nombre..."
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreDepartamento" />
+
+    <TextView
+        android:id="@+id/lblCodigoDepartamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Codigo:"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreDepartamento" />
+
+    <EditText
+        android:id="@+id/txtCodigoDepartamento"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/input_style"
+        android:ems="10"
+        android:hint="Ingrese el código..."
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCodigoDepartamento" />
+
+    <Button
+        android:id="@+id/btnAgregarDepartamento"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="106dp"
+        android:backgroundTint="@color/blue"
+        android:onClick="agregarDepartamento"
+        android:text="AGREGAR"
+        android:textColor="@color/white"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblErrorInsertarDepartamento" />
+
+    <TextView
+        android:id="@+id/lblCancelarDepartamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="170dp"
+        android:text="CANCELAR"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarDepartamento" />
+
+    <TextView
+        android:id="@+id/lblErrorInsertarDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textColor="@color/red"
+        android:text="ERROR"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoDepartamento"
+        tools:layout_editor_absoluteX="168dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
